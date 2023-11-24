@@ -4,6 +4,11 @@ body {
   font-family: Arial, sans-serif;
 }
 
+.foto-perfil {
+  width: 30px;
+  border-radius: 50%;
+}
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -13,7 +18,8 @@ nav {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.superior-esquerdo, .superior-direito {
+.superior-esquerdo,
+.superior-direito {
   display: flex;
   align-items: center;
 }
@@ -48,6 +54,10 @@ nav {
   cursor: pointer;
 }
 
+.centro input[type="button"]:hover {
+  background-color: #8f0000;
+}
+
 main {
   display: flex;
   flex-direction: column;
@@ -64,7 +74,7 @@ main {
   grid-template-columns: repeat(6, 1fr);
   align-items: center;
   margin-top: 10px;
-  gap: 20px; /* Espaçamento igualitário entre os elementos */
+  gap: 10px;
 }
 
 .barra-inferior img {
@@ -81,11 +91,32 @@ main {
 .barra-inferior .compartilhar,
 .barra-inferior .download,
 .barra-inferior .canalInscritos {
+  font-size: small;
   display: flex;
   align-items: center;
+  margin: auto;
+}
+
+.barra-inferior .canalInscritos {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.barra-inferior .canalInscritos .nome-canal {
+  color: #000;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.barra-inferior .canalInscritos .inscritos-canal {
+  color: #515151;
+  font-size: smaller;
+  font-weight: 400;
 }
 
 .barra-inferior input[type="button"] {
+  margin: 10px;
   background-color: #FF0000;
   color: #fff;
   border: none;
@@ -94,8 +125,59 @@ main {
   cursor: pointer;
 }
 
+.barra-inferior input[type="button"]:hover {
+  background-color: #8f0000;
+}
+
 .barra-inferior .icone-canal {
   display: flex;
   align-items: center;
   color: gray;
+}
+
+main.container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+
+.recomendacoes {
+  font-size: x-small;
+}
+
+.recomendacoes > div {
+  display: flex;
+  gap: 10px;
+  padding-bottom: 16px;
+}
+
+.recomendacoes img {
+  max-width: 100%;
+  height: auto;
+}
+
+.reco-titulo {
+  color: #000;
+  font-weight: bold;
+}
+
+.reco-canal,
+.reco-visu,
+.reco-tempo {
+  color: #515151;
+}
+
+.recomendacoes p {
+  margin: 0px 0px 0px 0px;
+}
+
+.descricao {
+  font-size: small;
+  color: #515151;
+}
+
+.video-desc {
+  color: #000;
+  font-size: small;
+  font-weight: bold;
 }
